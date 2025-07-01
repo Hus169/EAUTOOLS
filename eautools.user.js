@@ -3,7 +3,7 @@
 // @namespace    https://github.com/Hus169
 // @version      8.1
 // @description  Automate TOTS Grinding Upgrade with retries, submit, and proper wait for SBC menu loading in EA UT web app
-// @author       SCODUF
+// @author       HANBAL
 // @match        https://www.ea.com/ea-sports-fc/ultimate-team/web-app/*
 // @grant        none
 // @updateURL    https://raw.githubusercontent.com/Hus169/EAUTOOLS/main/eautools.user.js
