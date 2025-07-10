@@ -1,0 +1,97 @@
+{
+  "name": "eautools",
+  "version": "8.1.4",
+  "description": "Optimized EA Sports FC Ultimate Team automation script",
+  "type": "module",
+  "scripts": {
+    "build": "npm run build:dev && npm run build:prod",
+    "build:dev": "rollup -c --environment NODE_ENV:development",
+    "build:prod": "rollup -c --environment NODE_ENV:production",
+    "watch": "rollup -c --watch",
+    "analyze": "npm run build:prod && npx rollup-plugin-analyzer",
+    "test": "echo \"No tests specified\" && exit 0",
+    "lint": "eslint src/**/*.js",
+    "format": "prettier --write src/**/*.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.0",
+    "@babel/preset-env": "^7.22.0",
+    "@rollup/plugin-babel": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "eslint": "^8.42.0",
+    "prettier": "^2.8.8",
+    "rollup": "^3.25.0",
+    "rollup-plugin-analyzer": "^4.0.0",
+    "rollup-plugin-terser": "^7.0.2"
+  },
+  "browserslist": [
+    "Chrome >= 80",
+    "Firefox >= 75"
+  ],
+  "keywords": [
+    "userscript",
+    "ea-sports-fc",
+    "ultimate-team",
+    "automation",
+    "greasemonkey",
+    "tampermonkey"
+  ],
+  "author": "HANBAL",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hus169/EAUTOOLS.git"
+  },
+  "files": [
+    "dist/",
+    "src/",
+    "rollup.config.js"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "chrome": "80",
+            "firefox": "75"
+          }
+        }
+      ]
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2022": true,
+      "greasemonkey": true
+    },
+    "extends": ["eslint:recommended"],
+    "parserOptions": {
+      "ecmaVersion": 2022,
+      "sourceType": "module"
+    },
+    "globals": {
+      "unsafeWindow": "readonly",
+      "GM_info": "readonly",
+      "GM_getValue": "readonly",
+      "GM_setValue": "readonly"
+    },
+    "rules": {
+      "no-console": "off",
+      "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+      "prefer-const": "error",
+      "no-var": "error"
+    }
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "printWidth": 100
+  }
+}
