@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         UTOOLS
 // @namespace    https://github.com/Hus169
-// @version      8.1.4
+// @version      8.1.5
 // @description  Automate sbc grind
 // @author       HANBAL
 // @match        https://www.ea.com/ea-sports-fc/ultimate-team/web-app/*
